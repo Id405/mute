@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <link rel="stylesheet" href="style.css">
+  <title>mute</title>
+</head>
+
+<body>
+  <div class="menu-bar-container">
+    <div id="menu-bar" class="elevation-0">
+      <div class="left" role="menu">
+        <!--  <button class="menubar-btn" id="menu-btn" onclick="dropDown()"><svg xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-disabled" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.25"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <line x1="4" y1="6" x2="20" y2="6" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="18" x2="20" y2="18" />
+        </svg></button> -->
+        <p>mute</p>
+      </div>
+      <div class="mid">
+        <p id="menubar-path"></p>
+      </div>
+      <div class="right">
+        <button class="menubar-btn" id="minimize-btn"><svg xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-disabled" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.25"
+            stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <line x1="5" y1="12" x2="19" y2="12" />
+          </svg></button>
+        <button class="menubar-btn" id="max-unmax-btn"><svg xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-disabled" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.25"
+            stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+          </svg></button>
+        <button class="menubar-btn" id="close-btn"><svg xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-disabled" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.25"
+            stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg></button>
+      </div>
+    </div>
+  </div>
+  <div class="application elevation-1" id="application">
+    <div class="content">
+      <div class="editable columnleft fullheight">
+        <textarea id="expression" class="input expression monospace" placeholder="expressions..." autofocus></textarea>
+      </div>
+      <div class="columnright fullheight monospace">
+        <p id="answer"></p>
+      </div>
+    </div>
+    <div class="elevation-1 row-bottom">
+      <input id="cmd" class="input fullheight elevation-3" placeholder="commands..." />
+    </div>
+    </div>
+  </div>
+  <script src="./renderer.js"></script>
+</body>
+
+</html>
